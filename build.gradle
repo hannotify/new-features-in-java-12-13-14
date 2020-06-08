@@ -36,3 +36,7 @@ test {
     // Use junit platform for unit tests
     useJUnitPlatform()
 }
+
+tasks.withType(JavaCompile).each {
+    it.options.compilerArgs.add('--enable-preview')
+}
